@@ -89,7 +89,7 @@ export async function testSolution(uri?: vscode.Uri): Promise<void> {
 
 function parseTestString(test: string): string {
     if (wsl.useWsl() || !isWindows()) {
-        return `'${test}'`;
+        return `'"${test}"'`;
     }
 
     // In windows and not using WSL
